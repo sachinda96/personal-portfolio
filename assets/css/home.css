@@ -1,0 +1,34 @@
+.services-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+}
+
+.services-items {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: overflowAnimation 17s linear infinite;
+}
+
+.item {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust as needed */
+    margin-right: 15px; /* Optional: add spacing between items */
+}
+
+.item p {
+    width: 50px ; /* Make the <p> tag take up the full width of its parent */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    /* Add any other styles you want for the <p> tag */
+}
+
+@keyframes overflowAnimation {
+    0% {
+        transform: translateX(0); /* Start with no translation */
+    }
+    100% {
+        transform: translateX(-100%); /* Translate all items to the left (negative direction) */
+    }
+}
